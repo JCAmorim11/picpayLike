@@ -20,7 +20,10 @@ public class CreditCardDTO {
   private String titularName;
 
   private String number;
+
   private String numberToken;
+
   private UserDTO user;
+
   private Boolean isSaved = false;
 }
