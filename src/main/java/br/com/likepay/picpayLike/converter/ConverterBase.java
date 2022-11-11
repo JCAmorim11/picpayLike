@@ -8,9 +8,9 @@ public abstract class ConverterBase<E,D>{
     public abstract E converterDtoToEntity(D dto);
 
 
-    public List<D> converterEntityToDTO(List<E> entity){
+    public List<D> converterEntityToDTO(List<E> entities){
         List<D> dtos = new ArrayList<>();
-        entity.stream().forEach(entity -> dtos.add(converterEntityToDTO(entity)));
+        entities.stream().forEach(entity -> dtos.add(converterEntityToDTO(entity)));
         return dtos;
     }
 

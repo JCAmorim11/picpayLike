@@ -25,8 +25,8 @@ public class Transaction extends Base {
   private User destination;
 
   @Column(name = "TR_VALOR", nullable = false)
-  private LocalDateTime dateHour;
+  private LocalDateTime dateTime;
 
   @Column(name = "TR_VALOR", nullable = false)
-  private Double valor;
+  private Double value;
 }
