@@ -1,4 +1,4 @@
-package enums;
+package br.com.likepay.picpayLike.enums;
 
 public enum CardBrand {
   VISA("Visa"),

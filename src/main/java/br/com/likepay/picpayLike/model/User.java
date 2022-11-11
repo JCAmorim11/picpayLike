@@ -1,4 +1,4 @@
-package model;
+package br.com.likepay.picpayLike.model;
 
 import java.time.LocalDateTime;
 import java.util.List;

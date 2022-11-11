@@ -1,6 +1,6 @@
-package model;
+package br.com.likepay.picpayLike.model;
 
-import enums.CardBrand;
+import br.com.likepay.picpayLike.enums.CardBrand;
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package dto;
+package br.com.likepay.picpayLike.dto;
 
-import enums.CardBrand;
+import br.com.likepay.picpayLike.enums.CardBrand;
 import javax.validation.constraints.NotBlank;
 import lombok.Data;
 

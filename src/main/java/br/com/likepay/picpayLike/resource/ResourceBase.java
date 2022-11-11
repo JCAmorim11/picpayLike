@@ -30,23 +30,23 @@ public abstract class ResourceBase<T> {
 
    protected ResponseEntity<T> responseSucessWithItem(T object){
        return ResponseEntity.status(HttpStatus.OK).body(object);
-   }
-   protected ResponseEntity<List<T>> responseSucessEmptyList(){
-       List<T> emptyList = new ArrayList<>();
-       return ResponseEntity.status(HttpStatus.OK).body(emptyList);
-   }
+    }
 
-   protected ResponseEntity<List<T>> responseListItems(List<T> items){
-       return ResponseEntity.status(HttpStatus.OK).body(items);
-   }
+    protected ResponseEntity<List<T>> responseSucessEmptyList(){
+        List<T> emptyList = new ArrayList<>();
+        return ResponseEntity.status(HttpStatus.OK).body(emptyList);
+    }
 
-   protected ResponseEntity<T> responseBadRequest(){
-       return ResponseEntity.badRequest().build();
-   }
-
-   protected ResponseEntity<Page<T>> responseListItemsPaged(Page<T> items){
+    protected ResponseEntity<List<T>> responseListItems(List<T> items){
         return ResponseEntity.status(HttpStatus.OK).body(items);
-   }
+    }
 
+    protected ResponseEntity<T> responseBadRequest(){
+        return ResponseEntity.badRequest().build();
+    }
+
+    protected ResponseEntity<Page<T>> responseListItemsPaged(Page<T> items){
+        return ResponseEntity.status(HttpStatus.OK).body(items);
+    }
 
 }
