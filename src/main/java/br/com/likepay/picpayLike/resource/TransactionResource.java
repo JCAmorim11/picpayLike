@@ -2,7 +2,7 @@ package br.com.likepay.picpayLike.resource;
 
 import br.com.likepay.picpayLike.dto.TransactionDTO;
 import br.com.likepay.picpayLike.service.ITransactionService;
-import br.com.likepay.picpayLike.service.TransactionService;
+import br.com.likepay.picpayLike.service.implementation.TransactionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

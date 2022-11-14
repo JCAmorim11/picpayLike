@@ -8,5 +8,5 @@ public interface IUserService {
 
     void updateBalance(Transaction transaction, Boolean isCreditCard);
 
-    void valid(User destination, User origin);
+    void valid(User... users);
 }

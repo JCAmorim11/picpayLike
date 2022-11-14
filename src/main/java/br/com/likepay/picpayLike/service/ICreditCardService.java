@@ -1,7 +1,8 @@
 package br.com.likepay.picpayLike.service;
 
 import br.com.likepay.picpayLike.dto.CreditCardDTO;
+import br.com.likepay.picpayLike.model.CreditCard;
 
 public interface ICreditCardService {
-    void save(CreditCardDTO creditCard);
+    CreditCard save(CreditCardDTO creditCard);
 }
