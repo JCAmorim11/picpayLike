@@ -29,13 +29,7 @@ public class UserService implements IUserService {
     @Override
     public void valid(User... users ) {
         Arrays.asList(users).stream().forEach(user -> {
-            if(user == null){
-                try {
-                    throw new BussinessException();
-                } catch (BussinessException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            throw new BussinessException("o usuario nao existe");
         });
     }
 }

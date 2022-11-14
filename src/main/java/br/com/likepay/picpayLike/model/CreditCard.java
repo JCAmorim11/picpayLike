@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class CreditCard extends Base {
 
   @Column(name = "CC_NUMERO", nullable = false)
-  private String numero;
+  private String number;
 
   @Enumerated(EnumType.STRING)
   @Column(name = "CC_BANDEIRA", nullable = false)

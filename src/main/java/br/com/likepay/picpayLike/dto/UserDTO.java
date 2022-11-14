@@ -17,7 +17,7 @@ public class UserDTO {
     private String email;
     private String fullName;
     private String CPF;
-    private LocalDateTime dateTime;
+    private LocalDateTime birthDate;
     private String telephoneNumber;
     private Double balance;
 }
