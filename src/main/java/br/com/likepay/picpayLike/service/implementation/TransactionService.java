@@ -8,9 +8,11 @@ import br.com.likepay.picpayLike.service.ICreditCardService;
 import br.com.likepay.picpayLike.service.ITransactionService;
 import br.com.likepay.picpayLike.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
+import java.awt.print.Pageable;
 
 @Service
 public class TransactionService implements ITransactionService {
@@ -33,6 +35,12 @@ public class TransactionService implements ITransactionService {
         userService.updateBalance(transaction, transactionDTO.getIsCreditCard());
         TransactionDTO novo = new TransactionDTO();
         return transactionConverter.converterEntityToDTO(transaction);
+    }
+
+    @Override
+    public Page<TransactionDTO> list(Pageable paginator, String login) {
+        Page<Transaction> transactions = transactionRepository.findByOrigin_LoginOrDestination_Login(login,login, paginator);
+        return transactionConverter.converterPageEntityToDTO(transactions);
     }
 
     private Transaction save(TransactionDTO transactionDTO){
