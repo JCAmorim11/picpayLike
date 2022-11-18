@@ -48,4 +48,7 @@ public class User extends Base {
 
   @Column(name = "USU_ATIVO", nullable = false)
   private Boolean active;
+
+  public class UserDTO {
+  }
 }
