@@ -32,8 +32,7 @@ public class UserResource extends ResourceBase<UserDTO> {
     }
 
     @GetMapping("/{login}/saldo")
-    public ResponseEntity<UserDTO> consultBalance(@PageableDefault(page = 0, size = 20) Pageable paginator,
-                                                  @PathVariable String login){
+    public ResponseEntity<UserDTO> consultBalance(@PathVariable String login){
         UserDTO userDTO = userService.search(login);
         return responseSucessWithItem(userDTO);
     }

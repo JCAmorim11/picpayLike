@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService implements IUserService {
@@ -43,7 +44,9 @@ public class UserService implements IUserService {
 
     @Override
     public List<UserDTO> list(String login) {
-        return null;
+        List<User> users = userRepository.findAll();
+        List<User> filtered = users.stream().filter(v -> !v.getLogin().equals(login)).collect(Collectors.toList());
+        return converter.converterEntityToDTO(filtered);
     }
 
 
